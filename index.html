@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Coming Soon | Roland Dhliwayo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" type="text/css" href="index.css">
+<link rel="shortcut icon" href="images/fav.png" type="png"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrapper">
+   
+   <div class="row">
+   <div class="head col-12"></div>
+   <div class="content col-12">
+   
+     <div class="jumbotron text-center">
+       <div class="embed-head">
+       <h1>COMING SOON!</h1>
+       
+       
+       <p class="text">The website is under construction. Very soon a
+	   new and awesome site will be launched. Check the social media for more notifications.</p>
+	   
+       <div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+  
+  <br>
+       </div>
+
+    
+    <script>
+	   function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.now();
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+// count down timer:
+//		var deadline = new Date(Date.now() + 51 * 30 * 60 * 60 * 1000);
+var deadline = new Date("Wed, 07 March 2018 13:30:00");
+initializeClock('clockdiv', deadline);
+	</script>
+   
+    
+    
+    
+    
+    
+    
+   
+       
+       
+     
+      </div> 
+    </div>
+    
+    
+    
+    
+   
+    </div>
+   </div>
+  
+   
+  <div class="row">
+   <div class="footer col-12">
+      <ul class="social-network social-circle social">
+		<li><a class="bounce" href="https://www.facebook.com/UHaulRolloTrynaMoveSon" target="-blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+		<li><a href="https://twitter.com/rollodadon" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+	    <li><a href="https://www.instagram.com/rollodadon/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+	    <li><a href="https://www.linkedin.com/in/roland-dhliwayo-72b0957b/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+	    
+		</ul>
+	  
+       <p class="footy"> Copyright &copy; 2017 Roland Dhliwayo</p>
+      
+     </div>
+    </div>
+   </div>
+ </body>
+</html>
